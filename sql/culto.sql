@@ -1,1 +1,5 @@
-CREATE TABLE `budis479_hbs`.`culto` ( `id_Cultos` INT NOT NULL COMMENT'Código do Culto' , `Culto` VARCHAR(30) NOT NULL COMMENT 'Tipo do Culto' ,`Especial` CHAR(1) NOT NULL COMMENT 'Culto Especial (S/N)' , `Situacao_Culto`CHAR(1) NOT NULL COMMENT 'Situação do Culto' , PRIMARY KEY (`id_Culto`)COMMENT 'Id_Culto' ) ENGINE = MyISAM;
+CREATE TABLE `budis479_hbs`.`culto` ( 
+`id_cultoc` INT NOT NULL COMMENT'Código do Culto' , 
+`nome_culto` VARCHAR(30) NOT NULL COMMENT 'Tipo do Culto' ,
+`especial` CHAR(1) NOT NULL COMMENT 'Culto Especial (S/N)' , 
+`situacao_Culto`CHAR(1) NOT NULL COMMENT 'Situação do Culto' , PRIMARY KEY (`id_Culto`)COMMENT 'Id_Culto' ) ENGINE = MyISAM;
