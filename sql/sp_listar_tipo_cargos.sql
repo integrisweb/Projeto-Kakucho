@@ -11,14 +11,11 @@ begin
   if opcao = 'obt' then --obter
      if Intid_cargo is not null then --obter pelo código do cargo
         select id_cargo, nome_cargo, situacao_cargo from cargo where id_cargo = Intid_cargo;
-     else
-        if Strnome_cargo is not null then --obter por nome do cargo
+     else if Strnome_cargo is not null then --obter por nome do cargo
            select id_cargo, nome_cargo, situacao_cargo from cargo where nome_cargo like '%Strnome_cargo%';
      end if;
-  else
-     if opcao = 'lst' then --listar apenas dados ativos
+  else if opcao = 'lst' then --listar apenas dados ativos
         select id_cargo, nome_cargo, situacao_cargo from cargo where situacao_cargo = 'A';
-     end if;
   end if;
 end $$
 delimiter ;
