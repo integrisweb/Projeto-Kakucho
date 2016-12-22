@@ -1,0 +1,1 @@
+CREATE TABLE `budis479_hbs`.`presenca` ( `id_fiel` INT NULL DEFAULT NULLCOMMENT 'Código do Fiel' , `id_templo` INT NULL DEFAULT NULL COMMENT 'Código do te,plo' , `id_culto` INT NULL DEFAULT NULL COMMENT 'Código do Culto' ,`data_presenca` DATE NULL DEFAULT NULL COMMENT 'Data de Comparecimento' ,`situacao_presenca` INT NOT NULL ) ENGINE = MyISAM;

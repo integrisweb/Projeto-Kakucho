@@ -1,0 +1,1 @@
+CREATE TABLE `budis479_hbs`.`parentesco` ( `id_parentesco` INT NOT NULL AUTO_INCREMENT COMMENT 'Código do Parentesco' , `Parentesco` VARCHAR(40) NOTNULL COMMENT 'Tipo do Parentesco' , `situacao_parentesco` CHAR(1) NOT NULLCOMMENT 'Situação Tipo de Parentesco' , PRIMARY KEY (`id_parentesco`) COMMENT'idParentesco' ) ENGINE = MyISAM;

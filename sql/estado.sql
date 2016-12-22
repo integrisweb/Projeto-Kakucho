@@ -1,0 +1,1 @@
+CREATE TABLE `budis479_hbs`.`estado` ( `id_estado` INT NOT NULL COMMENT'código do Estado' , `nome_estado` INT NOT NULL COMMENT 'Nome do Estado' ,`sigla_estado` INT NOT NULL COMMENT 'Sigla do Estado' , `situacao_estado` INT NOT NULL COMMENT 'Situação do Estado' , PRIMARY KEY (`id_estado`) COMMENT'id_estado' ) ENGINE = MyISAM;

@@ -1,0 +1,1 @@
+ALTER TABLE `grau` ADD `Pontuação` INT NOT NULL DEFAULT '0' COMMENT 'Pontuação do Fiel' AFTER `Nome do Grau`;
