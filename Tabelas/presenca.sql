@@ -1,6 +1,6 @@
 CREATE TABLE `budis479_hbs`.`presenca` ( 
-`id_presenca` INT NULL DEFAULT NULLCOMMENT 'Código da Presenca' ,
-`id_fiel` INT NULL DEFAULT NULLCOMMENT 'Código do Fiel' , 
+`id_presenca` INT NULL DEFAULT NULL COMMENT 'Código da Presenca' ,
+`id_fiel` INT NULL DEFAULT NULL COMMENT 'Código do Fiel' , 
 `id_templo` INT NULL DEFAULT NULL COMMENT 'Código do templo' , 
 `id_culto` INT NULL DEFAULT NULL COMMENT 'Código do Culto' ,
 `id_grupo` INT NULL DEFAULT NULL COMMENT 'Código do Grupo' ,

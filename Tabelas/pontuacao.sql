@@ -1,5 +1,5 @@
 CREATE TABLE `budis479_hbs`.`pontuacao` ( 
-`id_fiel` INT NULL DEFAULT NULLCOMMENT 'Código do Fiel' , 
+`id_fiel` INT NULL DEFAULT NULL COMMENT 'Código do Fiel' , 
 `id_templo` INT NULL DEFAULT NULL COMMENT'Código do Templo' , 
 `id_grau` INT NULL DEFAULT NULL COMMENT 'Código da Pontuação' , 
 `id_cargo` INT NULL DEFAULT NULL COMMENT 'Cargo do Fiel/Sacerdote'
