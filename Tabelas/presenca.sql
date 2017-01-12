@@ -1,4 +1,4 @@
-CREATE TABLE `budis479_hbs`.`presenca` ( 
+CREATE TABLE `presenca` ( 
 `id_presenca` INT NULL DEFAULT NULL COMMENT 'Código da Presenca' ,
 `id_fiel` INT NULL DEFAULT NULL COMMENT 'Código do Fiel' , 
 `id_templo` INT NULL DEFAULT NULL COMMENT 'Código do templo' , 

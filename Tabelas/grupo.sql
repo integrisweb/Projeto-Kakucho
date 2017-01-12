@@ -1,4 +1,4 @@
-CREATE TABLE `budis479_hbs`.`grupo` ( 
+CREATE TABLE `grupo` ( 
 `id_grupo` INT NOT NULL AUTO_INCREMENT COMMENT 'Código do Grupo' , 
 `id_templo` INT NOT NULL COMMENT 'Código do Templo' , 
 `nome_grupo` VARCHAR(40) NULL DEFAULT NULL COMMENT'Nome do Grupo' , 
