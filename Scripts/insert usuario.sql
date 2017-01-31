@@ -1,0 +1,1 @@
+insert into usuario(nome_usuario,senha_usuario,situacao_usuario) values('admin','zcx#21','N');
