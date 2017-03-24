@@ -76,10 +76,13 @@
 
 	        echo "
 	        		<tr>
-	        			<td style='display:none'>$id</td>
+	        			<td style='display:none;'>$id</td>
 	        			<td><a class='tableLine' style='cursor: pointer;'>$nome</a></td>
-	        			<td class='hidden-xs'>$sigla</td>
+	        			<td width='25%'>&nbsp;</td>
+	        			<td>$sigla</td>
+	        			<td width='30%'>&nbsp;</td>						
 	        			<td class='hidden-xs'>$situacao</td>
+	        			<td width='28%'>&nbsp;</td>						
 	        		</tr>
 	        	";
 	    }

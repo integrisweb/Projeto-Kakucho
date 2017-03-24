@@ -13,6 +13,16 @@
 ?>
 
     <main class="ls-main">
+	<style type="text/css">
+		table.table-scroll-body {
+		  position: relative;
+		  height: 200px; }
+
+		  table.table-scroll-body tbody {
+			position: absolute;
+			max-height: 200px;
+			overflow: auto; }	
+	</style>
       <div class="container-fluid">
         <h1 class="ls-title-intro ls-ico-tree">Estado</h1>
 
@@ -50,7 +60,7 @@
           <button class="ls-btn" id="novo">Novo</button>
         </div>        
 
-        <table class="ls-table ls-table-striped ls-bg-header" id="table_list">
+        <table class="ls-table ls-table-striped ls-bg-header table-scroll-body" id="table_list">
           <thead>
             <tr>
               <th>Estado</th>
@@ -58,7 +68,7 @@
               <th class="hidden-xs">Situação</th>
             </tr>
           </thead>
-          <tbody id='myRegList'></tbody>
+			<tbody id='myRegList'></tbody>
         </table>
       </div>
     </main>

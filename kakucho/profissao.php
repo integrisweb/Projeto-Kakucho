@@ -13,36 +13,17 @@
 ?>
 
     <main class="ls-main">
-	<style type="text/css">
-		table.table-scroll-body {
-		  position: relative;
-		  height: 250px; }
-
-		  table.table-scroll-body tbody {
-			position: absolute;
-			max-height: 350px;
-			overflow: auto; }	
-	</style>	
       <div class="container-fluid">
-        <h1 class="ls-title-intro ls-ico-tree">Culto</h1>
+        <h1 class="ls-title-intro ls-ico-tree">Profissão</h1>
 
-        <form action="" class="ls-form row" id="formCulto">
+        <form action="" class="ls-form row" id="formProfissao">
           <input type="hidden" name="table_id" id="table_id" value="0"/>
         
           <fieldset>
             <label class="ls-label col-md-4">
-              <b class="ls-label-text">Culto</b>
-              <input type="text" name="nome" id="nome" placeholder="Culto" required>
+              <b class="ls-label-text">Profissão</b>
+              <input type="text" name="nome" id="nome" placeholder="Profissao" required>
             </label>
-          </fieldset>
-
-          <fieldset>
-            <div class="ls-label col-md-5">
-              <label class="ls-label-text">
-                <input type="checkbox" name="especial" id="especial">
-                Especial [S/N]
-              </label>
-            </div>
           </fieldset>
 
           <fieldset>
@@ -62,16 +43,16 @@
           <button class="ls-btn" id="novo">Novo</button>
         </div>        
 
-		<table class="ls-table ls-table-striped ls-bg-header table-scroll-body" id="table_list" style="height: 50px;"> 
+        <table class="ls-table ls-table-striped ls-bg-header" id="table_list">
           <thead>
             <tr>
-              <th>Culto</th>
-              <th>Especial</th>
+              <th>Profissão</th>
               <th class="hidden-xs">Situação</th>
             </tr>
           </thead>
-          <tbody id='myRegList' style="height: 200px; overflow-y: auto; overflow-x: hidden;"></tbody>
+          <tbody id='myRegList'></tbody>
         </table>
+      </div>
     </main>
 
     <script type="text/javascript">
@@ -88,14 +69,12 @@
         function salvarRegistro(){
           var vid = $('#table_id').val();
           var vnome = $('#nome').val();
-          var vespecial = ($('#especial').prop('checked') == true ? 'S' : 'N');
           var vsituacao = ($('#situacao').prop('checked') == true ? 'A' : 'I');
           var vacao = (vid == 0 ? 'inc' : 'alt');
 
           var dados = {
             id: vid,
             nome: vnome,
-            especial: vespecial,
             situacao: vsituacao,
             acao: vacao
           };
@@ -104,7 +83,7 @@
             alert('Existem campos não preenchidos....');
           }else{
             $.ajax({
-              url: 'cultocrud.php',
+              url: 'profissaocrud.php',
               type: 'POST',
               data: dados,
               success: function(data){
@@ -127,7 +106,7 @@
             alert('Selecione o registro a ser excluído!');
           }else{
             $.ajax({
-              url: 'cultocrud.php',
+              url: 'profissaocrud.php',
               type: 'POST',
               data: dados,
               success: function(retorno){
@@ -149,10 +128,7 @@
             $('#table_id').val(($('td:eq(0)', $(this).parents('tr')).text()));
             $('#nome').val(($('td:eq(1)', $(this).parents('tr')).text()));
 
-            var especial = (($('td:eq(2)', $(this).parents('tr')).text()) == 'Sim' ? true : false);
-            $('#especial').prop('checked', especial);
-
-            var situacao = (($('td:eq(3)', $(this).parents('tr')).text()) == 'Ativo' ? true : false);
+            var situacao = (($('td:eq(2)', $(this).parents('tr')).text()) == 'Ativo' ? true : false);
             $('#situacao').prop('checked', situacao);
           }  
         };
@@ -169,7 +145,7 @@
           else{
             $('#novo').text("Cancelar");
             $('#excluir').prop('disabled', true);
-            $('#situacao').prop('checked', true);
+            $('#situacao').prop('checked', true);                        
             $('#nome').focus();
           }
         };
@@ -177,7 +153,6 @@
         function limparCampos(){
           $("#table_id").val(0);
           $("#nome").val("");
-          $("#especial").prop('checked', false);
           $("#situacao").prop('checked', true);
         };
 
@@ -187,7 +162,7 @@
           };
 
           $.ajax({
-            url: 'cultocrud.php',
+            url: 'profissaocrud.php',
             type: 'POST',
             data: dados,
             success: function(retorno){

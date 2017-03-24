@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html class="ls-theme-turquoise">
+	<head>
+		<title>Projeto Kakucho</title>
+
+		<meta charset="utf-8">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="description" content="Insira aqui a descrição da página.">
+
+		<link href="http://assets.locaweb.com.br/locastyle/3.9.0/stylesheets/locastyle.css" rel="stylesheet" type="text/css">
+		<link rel="icon" sizes="192x192" href="/locawebstyle/assets/images/ico-boilerplate.png">
+		<link rel="apple-touch-icon" href="/locawebstyle/assets/images/ico-boilerplate.png">
+	</head>
+	<body>
+		<div class="ls-topbar">
+
+			<div class="ls-notification-topbar">
+
+				<div class="ls-alerts-list">
+					<a href="#" class="ls-ico-bell-o" data-counter="8" data-ls-module="topbarCurtain" data-target="#ls-notification-curtain">
+            <span>Notificações</span>
+          </a>
+				</div>
+
+				<div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+					<a href="#" class="ls-ico-user">
+						<img src="/locawebstyle/assets/images/locastyle/avatar-example.jpg" alt="" />
+						<span class="ls-name">João Kennedy </span>(johnkennedy)
+					</a>
+
+					<nav class="ls-dropdown-nav ls-user-menu">
+						<ul>
+							<li><a href="#">Meu Perfil</a></li>
+							<li><a href="#">Sair</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<span class="ls-show-sidebar ls-ico-menu"></span>
+
+			<a href="index.html" class="ls-go-next">
+				<span class="ls-text">Voltar ao início</span>
+			</a>
+
+			<h1 class="ls-brand-name">
+				<a href="home" class="ls-ico-earth">
+					<small>Administração Inteligente</small>
+					Projeto Kakucho
+				</a>
+			</h1>
+
+		</div>
+
+    <aside class="ls-sidebar">
+	  	<div class="ls-sidebar-inner">
+	      <a href="/locawebstyle/documentacao/exemplos//pre-painel" class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
+
+        <nav class="ls-menu">
+          <ul>
+            
+            <li>
+              <a href="#" class="ls-ico-cog" title="Atividades">Atividades</a>
+              <ul>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-domain">Cultos</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Doações</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" class="ls-ico-tree" title="Cadastros">Cadastros</a>
+              <ul>
+                <li><a href="fiel.html">Fiéis</a></li>
+                <li><a href="templo.html">Templos</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Associação</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Doação</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-api">...</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="/locawebstyle/documentacao/exemplos/painel1/stats" class="ls-ico-book" title="Relatórios">Relatórios</a>
+              <ul>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-domain">Relatório I</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Relatório II</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Relatório III</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Relatório IV</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-api">Relatório V</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+  		</div>
+	  </aside>
+
+		<main class="ls-main">
+			<div class="container-fluid">
+				<h1 class="ls-title-intro ls-ico-tree">Templos</h1>
+
+        <ul class="ls-tabs-nav">
+          <li class="ls-active"><a data-ls-module="tabs" href="#geral">Geral</a></li>
+          <li><a data-ls-module="tabs" href="#cargos">Cargos</a></li>
+          <li><a data-ls-module="tabs" href="#associacoes">Associações</a></li>
+          <li><a data-ls-module="tabs" href="#regioes">Regiões</a></li>
+          <li><a data-ls-module="tabs" href="#cultos">Cultos</a></li>
+          <li><a data-ls-module="tabs" href="#doacoes">Doações</a></li>
+        </ul>
+        <div class="ls-tabs-container">
+          <div id="geral" class="ls-tab-content ls-active">
+            <div class="ls-box-demo">
+              <form action="" class="ls-form ls-form-horizontal row">
+                <fieldset>
+                  <label class="ls-label col-md-12 col-xs-12">
+                    <b class="ls-label-text">Templo</b>
+                    <input type="text" name="nome" placeholder="Nome do Templo" class="ls-field" required>
+                  </label>
+
+                  <label class="ls-label col-md-3 col-xs-12">
+                    <b class="ls-label-text">CNPJ</b>
+                    <input type="text" name="nome" placeholder="Número CNPJ" class="ls-field" required>
+                  </label>  
+                  <label class="ls-label col-md-9 col-xs-12">
+                    <b class="ls-label-text">Email</b>
+                    <input type="text" name="nome" placeholder="Email" class="ls-field" required>
+                  </label>
+
+                  <div class="ls-label col-md-12 col-xs-12">
+                    <label class="ls-label-text">
+                      <input type="checkbox" name="ativo" checked >
+                      Ativo
+                    </label>
+                  </div>
+
+                  <label class="ls-label col-md-5 col-xs-12">
+                    <b class="ls-label-text">Telefone</b>
+                    <input type="text" name="nome" placeholder="" class="ls-field" required>
+                  </label>
+                  <label class="ls-label col-md-2 col-xs-12">
+                    <b class="ls-label-text">Ramal</b>
+                    <input type="text" name="nome" placeholder="" class="ls-field" required>
+                  </label>
+                  <label class="ls-label col-md-5 col-xs-12">
+                    <b class="ls-label-text">Fax</b>
+                    <input type="text" name="nome" placeholder="" class="ls-field" required>
+                  </label>                  
+                  <div class="ls-box">
+                    <div data-ls-module="switchButton" class="ls-switch-btn ls-float-left">
+                      <input type="checkbox" id="tipotemplo" checked>
+                      <label class="ls-switch-label" for="tipotemplo" name="label-teste" ls-switch-off="Filial" ls-switch-on="Matriz">
+                        <span></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <label class="ls-label col-md-8 col-xs-12">
+                    <b class="ls-label-text">Logradouro</b>
+                    <input type="text" name="nome" placeholder="" class="ls-field" required>
+                  </label>
+
+                  <label class="ls-label col-md-1 col-xs-12">
+                    <b class="ls-label-text">Número</b>
+                    <input type="text" name="nome" placeholder="" class="ls-field" required>
+                  </label>  
+                  <label class="ls-label col-md-3 col-xs-12">
+                    <b class="ls-label-text">Complemento</b>
+                    <input type="text" name="nome" placeholder="" class="ls-field" required>
+                  </label>
+
+                  <label class="ls-label col-md-5 col-xs-12">
+                    <b class="ls-label-text">Bairro</b>
+                    <input type="text" name="nome" placeholder="" class="ls-field" required>
+                  </label>
+                  <label class="ls-label col-md-5 col-xs-12">
+                    <b class="ls-label-text">Cidade</b>
+                    <input type="text" name="nome" placeholder="" class="ls-field" required>
+                  </label>
+                  <label class="ls-label col-lg-2 col-md-2 col-sm-12">
+                    <b class="ls-label-text">UF</b>
+                    <div class="ls-custom-select">
+                      <select name="period" id="select_cargo" class="ls-select">
+                          <option>SP</option>
+                          <option>RJ</option>
+                          <option>SC</option>
+                          <option>SE</option>
+                          <option>PR</option>
+                          <option>BA</option>                          
+                      </select>
+                    </div>
+                  </label>                  
+                  <label class="ls-label col-md-5 col-xs-12">
+                    <b class="ls-label-text">CEP</b>
+                    <input type="text" name="nome" placeholder="" class="ls-field" required>
+                  </label>
+                  <label class="ls-label col-md-5 col-xs-12">
+                    <b class="ls-label-text">Caixa Postal</b>
+                    <input type="text" name="nome" placeholder="" class="ls-field" required>
+                  </label> 
+
+                  <div class="ls-actions-btn">
+                    <button class="ls-btn">Salvar</button>
+                    <button class="ls-btn-danger">Excluir</button>
+                  </div>
+                </fieldset>                
+              </form>
+            </div>
+          </div>
+
+          <div id="cargos" class="ls-tab-content">
+            <form action="" class="ls-form ls-form-horizontal row">
+              <fieldset>
+                <label class="ls-label col-lg-4 col-md-6 col-sm-12">
+                  <b class="ls-label-text">Cargo</b>
+                  <div class="ls-custom-select">
+                    <select name="period" id="select_cargo" class="ls-select">
+                        <option>DIRETOR</option>
+                        <option>MINISTRANTE</option>
+                        <option>TESOUREIRO</option>
+                    </select>
+                  </div>
+                </label>
+              </fieldset>
+              <fieldset>
+                <label class="ls-label col-lg-4 col-md-6 col-sm-12">
+                  <b class="ls-label-text">Titular</b>
+                  <div class="ls-custom-select">
+                    <select name="period" id="select_titular" class="ls-select">
+                        <option>WASHINGTON VALE</option>
+                        <option>SIDNEY ARAUJO</option>
+                        <option>SIMARA DA SILVA</option>
+                    </select>
+                  </div>
+                </label>
+              </fieldset>
+              <fieldset>
+                <label class="ls-label col-lg-2 col-md-3 col-sm-12">
+                  <b class="ls-label-text">Início da Gestão</b>
+                  <div class="ls-prefix-group">
+                    <span id="new_feature_custom_filter_2" data-ls-module="popover" data-content="Escolha o período desejado e clique em 'Filtrar'."></span>
+                    <input type="text" name="range_start" class="datepicker ls-daterange" placeholder="dd/mm/aaaa" id="datepicker1" data-ls-daterange="#datepicker2">
+                    <a class="ls-label-text-prefix ls-ico-calendar" data-trigger-calendar="#datepicker1" href="#"></a>
+                  </div>
+                </label>
+              </fieldset>
+              <fieldset>
+              <label class="ls-label col-lg-2 col-md-3 col-sm-12">
+                <b class="ls-label-text">Fim da Gestão</b>
+                <div class="ls-prefix-group">
+                  <span id="new_feature_custom_filter_3" data-ls-module="popover" data-content="Clique em 'Filtrar' para exibir  o período selecionado."></span>
+                  <input type="text" name="range_end" class="datepicker ls-daterange" placeholder="dd/mm/aaaa" id="datepicker2">
+                  <a class="ls-label-text-prefix ls-ico-calendar" data-trigger-calendar="#datepicker2" href="#"></a>
+                </div>
+              </label>
+              </fieldset>       
+              <fieldset>
+                <div class="ls-label col-md-5">
+                  <label class="ls-label-text">
+                    <input type="checkbox" name="ativo" checked >
+                    Ativo
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="ls-actions-btn">
+                <button class="ls-btn">Salvar</button>
+                <button class="ls-btn-danger">Excluir</button>
+              </div>
+            </form>
+
+            <table class="ls-table ls-table-striped ls-bg-header">
+              <thead>
+                <tr>
+                  <th>Cargo</th>
+                  <th>Titular</th>
+                  <th>Início da Gestão</th>
+                  <th>Fim da Gestão</th>
+                  <th class="hidden-xs">Situação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="" title="">Gerente</a></td>
+                  <td class="hidden-xs">Washington</td>
+                  <td class="hidden-xs">01/01/2016</td>
+                  <td class="hidden-xs">31/12/2016</td>
+                  <td class="hidden-xs">Ativo</td>
+                </tr>
+                <tr>
+                  <td><a href="" title="">Gerente</a></td>                
+                  <td class="hidden-xs">Sídney</td>
+                  <td class="hidden-xs">01/01/2017</td>
+                  <td class="hidden-xs">31/12/2017</td>
+                  <td class="hidden-xs">Ativo</td>
+                </tr>
+              </tbody>
+            </table>           
+          </div>
+
+          <div id="associacoes" class="ls-tab-content">
+            <form action="" class="ls-form ls-form-horizontal row">
+              <fieldset>
+                <label class="ls-label col-lg-4 col-md-6 col-sm-12">
+                  <b class="ls-label-text">Associação</b>
+                  <div class="ls-custom-select">
+                    <select name="period" id="select_regiao" class="ls-select">
+                        <option>POUSO ALEGRE</option>
+                        <option>PERUÍBE</option>
+                        <option>SANTANA DE PARNAÍBA</option>
+                    </select>
+                  </div>
+                </label>
+              </fieldset>
+              <fieldset>
+                <label class="ls-label col-lg-4 col-md-6 col-sm-12">
+                  <b class="ls-label-text">Titular</b>
+                  <div class="ls-custom-select">
+                    <select name="period" id="select_titular" class="ls-select">
+                        <option>WASHINGTON VALE</option>
+                        <option>SIDNEY ARAUJO</option>
+                        <option>SIMARA DA SILVA</option>
+                    </select>
+                  </div>
+                </label>
+              </fieldset>
+              <fieldset>
+                <label class="ls-label col-lg-4 col-md-6 col-sm-12">
+                  <b class="ls-label-text">Cargo</b>
+                  <div class="ls-custom-select">
+                    <select name="period" id="select_cargo" class="ls-select">
+                        <option>DIRETOR</option>
+                        <option>MINISTRANTE</option>
+                        <option>TESOUREIRO</option>
+                    </select>
+                  </div>
+                </label>
+              </fieldset>
+
+              <fieldset>
+                <label class="ls-label col-lg-2 col-md-3 col-sm-12">
+                  <b class="ls-label-text">Início da Gestão</b>
+                  <div class="ls-prefix-group">
+                    <span id="new_feature_custom_filter_2" data-ls-module="popover" data-content="Escolha o período desejado e clique em 'Filtrar'."></span>
+                    <input type="text" name="range_start" class="datepicker ls-daterange" placeholder="dd/mm/aaaa" id="datepicker1" data-ls-daterange="#datepicker2">
+                    <a class="ls-label-text-prefix ls-ico-calendar" data-trigger-calendar="#datepicker1" href="#"></a>
+                  </div>
+                </label>
+              </fieldset>
+              <fieldset>
+              <label class="ls-label col-lg-2 col-md-3 col-sm-12">
+                <b class="ls-label-text">Fim da Gestão</b>
+                <div class="ls-prefix-group">
+                  <span id="new_feature_custom_filter_3" data-ls-module="popover" data-content="Clique em 'Filtrar' para exibir  o período selecionado."></span>
+                  <input type="text" name="range_end" class="datepicker ls-daterange" placeholder="dd/mm/aaaa" id="datepicker2">
+                  <a class="ls-label-text-prefix ls-ico-calendar" data-trigger-calendar="#datepicker2" href="#"></a>
+                </div>
+              </label>
+              </fieldset>       
+              <fieldset>
+                <div class="ls-label col-md-5">
+                  <label class="ls-label-text">
+                    <input type="checkbox" name="ativo" checked >
+                    Ativo
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="ls-actions-btn">
+                <button class="ls-btn">Salvar</button>
+                <button class="ls-btn-danger">Excluir</button>
+              </div>
+            </form>
+
+            <table class="ls-table ls-table-striped ls-bg-header">
+              <thead>
+                <tr>
+                  <th>Associação</th>
+                  <th>Titular</th>
+                  <th>Cargo</th>
+                  <th>Início da Gestão</th>
+                  <th>Fim da Gestão</th>
+                  <th class="hidden-xs">Situação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="" title="">Peruíbe</a></td>
+                  <td class="hidden-xs">Washington</td>
+                  <td class="hidden-xs">Gerente</td>
+                  <td class="hidden-xs">01/01/2016</td>
+                  <td class="hidden-xs">31/12/2016</td>
+                  <td class="hidden-xs">Ativo</td>
+                </tr>
+                <tr>
+                  <td><a href="" title="">Pouso Alegre</a></td>                
+                  <td class="hidden-xs">Sídney</td>
+                  <td class="hidden-xs">Gerente</td>
+                  <td class="hidden-xs">01/01/2017</td>
+                  <td class="hidden-xs">31/12/2017</td>
+                  <td class="hidden-xs">Ativo</td>
+                </tr>
+              </tbody>
+            </table>           
+          </div>
+
+          <div id="regioes" class="ls-tab-content">
+            <form action="" class="ls-form row">
+              <fieldset>
+                <label class="ls-label col-lg-4 col-md-6 col-sm-12">
+                  <b class="ls-label-text">Região</b>
+                  <div class="ls-custom-select">
+                    <select name="period" id="select_regiao" class="ls-select">
+                        <option>POUSO ALEGRE</option>
+                        <option>PERUÍBE</option>
+                        <option>SANTANA DE PARNAÍBA</option>
+                    </select>
+                  </div>
+                </label>
+              </fieldset>
+              <fieldset>
+                <div class="ls-label col-md-5">
+                  <label class="ls-label-text">
+                    <input type="checkbox" name="ativo" checked >
+                    Ativo
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="ls-actions-btn">
+                <button class="ls-btn">Salvar</button>
+                <button class="ls-btn-danger">Excluir</button>
+              </div>
+            </form>
+
+            <table class="ls-table ls-table-striped ls-bg-header">
+              <thead>
+                <tr>
+                  <th>Região</th>
+                  <th class="hidden-xs">Situação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="" title="">Tipo I</a></td>
+                  <td class="hidden-xs">Ativo</td>
+                </tr>
+                <tr>
+                  <td><a href="" title="">Tipo III</a></td>
+                  <td class="hidden-xs">Ativo</td>
+                </tr>
+                <tr>
+                  <td><a href="" title="">Tipo IX</a></td>
+                  <td class="hidden-xs">Inativo</td>
+                </tr>
+              </tbody>
+            </table>          
+          </div>
+
+          <div id="cultos" class="ls-tab-content">
+            <form action="" class="ls-form row">
+              <fieldset>
+                <label class="ls-label col-lg-4 col-md-6 col-sm-12">
+                  <b class="ls-label-text">Tipo de Culto</b>
+                  <div class="ls-custom-select">
+                    <select name="period" id="select_tipoculto" class="ls-select">
+                        <option>ANO NOVO</option>
+                        <option>MENSAL</option>
+                        <option>KODOMOKAI</option>
+                        <option>MATINAL</option>
+                        <option>ORAÇÕES FERVOROSAS</option>
+                    </select>
+                  </div>
+                </label>
+              </fieldset>
+              <fieldset>
+                <div class="ls-label col-md-5">
+                  <label class="ls-label-text">
+                    <input type="checkbox" name="ativo" checked >
+                    Ativo
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="ls-actions-btn">
+                <button class="ls-btn">Salvar</button>
+                <button class="ls-btn-danger">Excluir</button>
+              </div>
+            </form>
+
+            <table class="ls-table ls-table-striped ls-bg-header">
+              <thead>
+                <tr>
+                  <th>Tipo de Culto</th>
+                  <th class="hidden-xs">Situação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="" title="">Tipo I</a></td>
+                  <td class="hidden-xs">Ativo</td>
+                </tr>
+                <tr>
+                  <td><a href="" title="">Tipo III</a></td>
+                  <td class="hidden-xs">Ativo</td>
+                </tr>
+                <tr>
+                  <td><a href="" title="">Tipo IX</a></td>
+                  <td class="hidden-xs">Inativo</td>
+                </tr>
+              </tbody>
+            </table>          
+          </div>
+
+          <div id="doacoes" class="ls-tab-content">
+            <form action="" class="ls-form row">
+              <fieldset>
+                <label class="ls-label col-lg-4 col-md-6 col-sm-12">
+                  <b class="ls-label-text">Tipo de Doação</b>
+                  <div class="ls-custom-select">
+                    <select name="period" id="select_tipodoacao" class="ls-select">
+                        <option>CULTO DE GRATIDÃO MENSAL</option>
+                        <option>KYOKU-FINADOS</option>
+                        <option>GRANDES CULTOS</option>
+                    </select>
+                  </div>
+                </label>
+              </fieldset>
+              <fieldset>
+                <div class="ls-label col-md-5">
+                  <label class="ls-label-text">
+                    <input type="checkbox" name="ativo" checked >
+                    Ativo
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="ls-actions-btn">
+                <button class="ls-btn">Salvar</button>
+                <button class="ls-btn-danger">Excluir</button>
+              </div>
+            </form>
+
+            <table class="ls-table ls-table-striped ls-bg-header">
+              <thead>
+                <tr>
+                  <th>Tipo de Doação</th>
+                  <th class="hidden-xs">Situação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="" title="">Tipo I</a></td>
+                  <td class="hidden-xs">Ativo</td>
+                </tr>
+                <tr>
+                  <td><a href="" title="">Tipo III</a></td>
+                  <td class="hidden-xs">Ativo</td>
+                </tr>
+                <tr>
+                  <td><a href="" title="">Tipo IX</a></td>
+                  <td class="hidden-xs">Inativo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+			</div>
+		</main>
+
+    	<aside class="ls-notification">
+			<nav class="ls-notification-list" id="ls-notification-curtain" style="left: 1716px;">
+				<h3 class="ls-title-2">Notificações</h3>
+				<ul>
+					<li class="ls-dismissable">
+						<a href="#">Blanditiis est est dolorem iure voluptatem eos deleniti repellat et laborum consequatur</a>
+						<a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+					</li>
+					<li class="ls-dismissable">
+						<a href="#">Similique eos rerum perferendis voluptatibus</a>
+						<a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+					</li>
+					<li class="ls-dismissable">
+						<a href="#">Qui numquam iusto suscipit nisi qui unde</a>
+						<a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+					</li>
+					<li class="ls-dismissable">
+						<a href="#">Nisi aut assumenda dignissimos qui ea in deserunt quo deleniti dolorum quo et consequatur</a>
+						<a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+					</li>
+					<li class="ls-dismissable">
+						<a href="#">Sunt consequuntur aut aut a molestiae veritatis assumenda voluptas nam placeat eius ad</a>
+						<a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="ls-notification-list" id="ls-help-curtain" style="left: 1756px;">
+				<h3 class="ls-title-2">Feedback</h3>
+				<ul>
+					<li><a href="#">&gt; quo fugiat facilis nulla perspiciatis consequatur</a></li>
+					<li><a href="#">&gt; enim et labore repellat enim debitis</a></li>
+				</ul>
+			</nav>
+
+      		<nav class="ls-notification-list" id="ls-feedback-curtain" style="left: 1796px;">
+        		<h3 class="ls-title-2">Ajuda</h3>
+        		<ul>
+          			<li class="ls-txt-center hidden-xs"><a href="#" class="ls-btn-dark ls-btn-tour">Fazer um Tour</a></li>
+	          		<li><a href="#">&gt; Guia</a></li>
+	          		<li><a href="#">&gt; Wiki</a></li>
+        		</ul>
+      		</nav>
+    	</aside>
+
+    	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    	<script src="http://assets.locaweb.com.br/locastyle/3.9.0/javascripts/locastyle.js" type="text/javascript"></script>
+  	</body>
+</html>

@@ -70,10 +70,12 @@
 	      	$situacao = ($row["situacao_cargo"] == "A") ? "Ativo" : "Inativo";
 
 	        echo "
-	        		<tr>
+	        		<tr width='100%'>
 	        			<td style='display:none'>$id</td>
-	        			<td><a class='tableLine' style='cursor: pointer;'>$nome</a></td>
+	        			<td width='50%'><a class='tableLine' style='cursor: pointer;'>$nome</a></td>
+	        			<td width='5%'>&nbsp;</td>
 	        			<td class='hidden-xs'>$situacao</td>
+	        			<td width='45%'>&nbsp;</td>						
 	        		</tr>
 	        	";
 	    }

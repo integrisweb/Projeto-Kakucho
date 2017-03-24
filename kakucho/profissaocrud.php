@@ -8,20 +8,17 @@
 	$acao     	= (isset($_POST['acao'])) ? $_POST['acao'] : '';
 	$id 		= (isset($_POST['id'])) ? $_POST['id'] : '';
 	$nome     	= (isset($_POST['nome'])) ? $_POST['nome'] : '';
-	$especial  	= (isset($_POST['especial'])) ? $_POST['especial'] : '';
 	$situacao   = (isset($_POST['situacao'])) ? $_POST['situacao'] : '';
 
 	if ($acao == 'inc'):
 		$sql = "
 			INSERT INTO 
-				culto (
-					nome_culto,
-					especial, 
-					situacao_culto
+				profissao_fiel (
+					nome_profissao_fiel, 
+					situacao_fiel
 			)
 			VALUES (
-					'$nome',
-					'$especial',
+					'$nome', 
 					'$situacao'
 			)
 		";
@@ -35,13 +32,12 @@
 	if ($acao == 'alt'):
 		$sql = "
 			UPDATE 
-				culto 
+				profissao_fiel
 			SET 
-				nome_culto = '$nome',
-				especial = '$especial',
-				situacao_culto = '$situacao'
+				nome_profissao_fiel = '$nome', 
+				situacao_fiel = '$situacao'
 			WHERE 
-				id_culto = '$id'
+				id_profissao_fiel = '$id'
 		";
 		
 		$stm = $pdo->prepare($sql);
@@ -52,8 +48,8 @@
 
 	if ($acao == 'exc'):
 		$sql = "
-			DELETE FROM culto 
-			WHERE id_culto = '$id'
+			DELETE FROM profissao_fiel
+			WHERE id_profissao_fiel = '$id'
 		";
 		
 		$stm = $pdo->prepare($sql);
@@ -64,29 +60,24 @@
 
 	if ($acao == 'list'):
 		$sql = "
-			SELECT id_culto,nome_culto,especial,situacao_culto
-			FROM culto 
-			ORDER BY nome_culto
+			SELECT id_profissao_fiel,nome_profissao_fiel,situacao_fiel
+			FROM profissao_fiel
+			ORDER BY nome_profissao_fiel
 		";
 		
       	foreach ($pdo->query($sql) as $row) {
-	        $id = $row["id_culto"];
-	        $nome = $row["nome_culto"];
-	      	$especial = ($row["especial"] == "S") ? "Sim" : "Não";
-	      	$situacao = ($row["situacao_culto"] == "A") ? "Ativo" : "Inativo";
+	        $id = $row["id_profissao_fiel"];
+	        $nome = $row["nome_profissao_fiel"];
+	      	$situacao = ($row["situacao_fiel"] == "A") ? "Ativo" : "Inativo";
 
 	        echo "
-					<tr width='100%'>
+	        		<tr>
 	        			<td style='display:none'>$id</td>
-	        			<td width='35%'><a class='tableLine' style='cursor: pointer;'>$nome</a></td>		
-	        			<td width='5%'>&nbsp;</td>						
-	        			<td class='hidden-xs'>$especial</td>
-	        			<td width='30%'>&nbsp;</td>			
+	        			<td><a class='tableLine' style='cursor: pointer;'>$nome</a></td>
 	        			<td class='hidden-xs'>$situacao</td>
-	        			<td width='35%'>&nbsp;</td>						
 	        		</tr>
 	        	";
 	    }
+	endif;
 		
-	endif;	
 ?>

@@ -13,65 +13,49 @@
 ?>
 
     <main class="ls-main">
-	<style type="text/css">
-		table.table-scroll-body {
-		  position: relative;
-		  height: 250px; }
-
-		  table.table-scroll-body tbody {
-			position: absolute;
-			max-height: 350px;
-			overflow: auto; }	
-	</style>	
       <div class="container-fluid">
-        <h1 class="ls-title-intro ls-ico-tree">Culto</h1>
+        <h1 class="ls-title-intro ls-ico-users">Perfil</h1>
 
-        <form action="" class="ls-form row" id="formCulto">
+        <form action="" class="ls-form row" id="formDoacao">
           <input type="hidden" name="table_id" id="table_id" value="0"/>
+
+          <fieldset>
+            <img src="assets/img/perfil.jpg" class="ls-ico-user" width="56" height="70" id="foto">
+            <span id="btnAnexar" class="ls-ico-camera"></span>
+            <input type="file" name="foto" id="impFoto">
+          </fieldset>
         
           <fieldset>
             <label class="ls-label col-md-4">
-              <b class="ls-label-text">Culto</b>
-              <input type="text" name="nome" id="nome" placeholder="Culto" required>
+              <b class="ls-label-text">Nome</b>
+              <input type="text" name="nome" id="nome" placeholder="Nome de usuário" required>
             </label>
           </fieldset>
 
           <fieldset>
-            <div class="ls-label col-md-5">
-              <label class="ls-label-text">
-                <input type="checkbox" name="especial" id="especial">
-                Especial [S/N]
-              </label>
-            </div>
+            <label class="ls-label col-md-4">
+              <b class="ls-label-text">Email</b>
+              <input type="text" name="email" id="email" placeholder="Email" required>
+            </label>
           </fieldset>
 
           <fieldset>
-            <div class="ls-label col-md-5">
-              <label class="ls-label-text">
-                <input type="checkbox" name="situacao" id="situacao" checked>
-                Ativo
-              </label>
-            </div>
+            <label class="ls-label col-md-4">
+              <b class="ls-label-text">Senha</b>
+              <div class="ls-prefix-group">
+                <input type="password" name="senha" id="senha" maxlength="6" placeholder="Senha [6 caracteres]" required>
+                <a class="ls-label-text-prefix ls-toggle-pass ls-ico-eye" data-toggle-class="ls-ico-eye, ls-ico-eye-blocked" data-target="#senha" href="#">
+                </a>
+              </div>
+            </label>
           </fieldset>
 
           <input type="hidden" name="action" id="action" value="">
         </form>
         <div class="ls-actions-btn">
           <button class="ls-btn-primary" id="salvar">Salvar</button>
-          <button class="ls-btn-primary-danger" id="excluir">Excluir</button>
-          <button class="ls-btn" id="novo">Novo</button>
-        </div>        
-
-		<table class="ls-table ls-table-striped ls-bg-header table-scroll-body" id="table_list" style="height: 50px;"> 
-          <thead>
-            <tr>
-              <th>Culto</th>
-              <th>Especial</th>
-              <th class="hidden-xs">Situação</th>
-            </tr>
-          </thead>
-          <tbody id='myRegList' style="height: 200px; overflow-y: auto; overflow-x: hidden;"></tbody>
-        </table>
+        </div>
+      </div>
     </main>
 
     <script type="text/javascript">
@@ -85,26 +69,32 @@
 
         listarRegistros();
 
+        $('#impFoto').css('display', 'none');
+        
+        $('#btnAnexar').click(function() {
+          $('#impFile').trigger('click');
+        });   
+
         function salvarRegistro(){
           var vid = $('#table_id').val();
           var vnome = $('#nome').val();
-          var vespecial = ($('#especial').prop('checked') == true ? 'S' : 'N');
+          var vsigla = $('#sigla').val();
           var vsituacao = ($('#situacao').prop('checked') == true ? 'A' : 'I');
           var vacao = (vid == 0 ? 'inc' : 'alt');
 
           var dados = {
             id: vid,
             nome: vnome,
-            especial: vespecial,
+            sigla: vsigla,
             situacao: vsituacao,
             acao: vacao
           };
 
-          if(vnome == "" || vsituacao == ""){
+          if(vnome == "" || vsigla == "" || vsituacao == ""){
             alert('Existem campos não preenchidos....');
           }else{
             $.ajax({
-              url: 'cultocrud.php',
+              url: 'estadocrud.php',
               type: 'POST',
               data: dados,
               success: function(data){
@@ -127,7 +117,7 @@
             alert('Selecione o registro a ser excluído!');
           }else{
             $.ajax({
-              url: 'cultocrud.php',
+              url: 'estadocrud.php',
               type: 'POST',
               data: dados,
               success: function(retorno){
@@ -148,9 +138,7 @@
           if(novoStatus == 'Novo'){
             $('#table_id').val(($('td:eq(0)', $(this).parents('tr')).text()));
             $('#nome').val(($('td:eq(1)', $(this).parents('tr')).text()));
-
-            var especial = (($('td:eq(2)', $(this).parents('tr')).text()) == 'Sim' ? true : false);
-            $('#especial').prop('checked', especial);
+            $('#sigla').val(($('td:eq(2)', $(this).parents('tr')).text()));
 
             var situacao = (($('td:eq(3)', $(this).parents('tr')).text()) == 'Ativo' ? true : false);
             $('#situacao').prop('checked', situacao);
@@ -169,7 +157,6 @@
           else{
             $('#novo').text("Cancelar");
             $('#excluir').prop('disabled', true);
-            $('#situacao').prop('checked', true);
             $('#nome').focus();
           }
         };
@@ -177,8 +164,8 @@
         function limparCampos(){
           $("#table_id").val(0);
           $("#nome").val("");
-          $("#especial").prop('checked', false);
-          $("#situacao").prop('checked', true);
+          $('#sigla').val("");
+          $("#situacao").prop('checked', false);
         };
 
         function listarRegistros(){
@@ -187,7 +174,7 @@
           };
 
           $.ajax({
-            url: 'cultocrud.php',
+            url: 'estadocrud.php',
             type: 'POST',
             data: dados,
             success: function(retorno){
