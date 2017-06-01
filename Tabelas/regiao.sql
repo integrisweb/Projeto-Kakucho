@@ -1,7 +1,5 @@
-CREATE TABLE `regiao` ( 
-`id_regiao` INT NOT NULL AUTO_INCREMENT COMMENT'CÛdigo da Regi„o' , 
-`id_estado` INT NULL DEFAULT NULL COMMENT 'CÛdigo do Estado' , 
-`nome_regiao` VARCHAR(30) NOT NULL COMMENT 'Regi„o do Templo' ,
-`situacao_regiao` CHAR(1) NOT NULL COMMENT 'SituaÁ„o da Regi„o' ,
-PRIMARY KEY(`id_regiao`)
-) ENGINE =MyISAM;
+CREATE TABLE `regiao` (
+`id_regiao` INT NOT NULL COMMENT 'C√≥digo da Regi√£o',
+`nome_regiao` VARCHAR(40) NULL DEFAULT NULL COMMENT 'Nome da Regi√£o',
+`situacao_regiao` CHAR(1) NULL DEFAULT NULL COMMENT 'Situa√ß√£o da Regi√£o',
+PRIMARY KEY (`id_regiao`) COMMENT 'C√≥digo da Regi√£o');
