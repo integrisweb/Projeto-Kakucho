@@ -1,6 +1,6 @@
 CREATE TABLE `tipo_doacao` ( 
-`id_tipo_doacao` INT NOT NULL AUTO_INCREMENT COMMENT'CÛdigo da DoaÁ„o' , 
-`nome_tipo_doacao` VARCHAR(40) NOT NULL COMMENT 'Tipo de DoaÁ„o' , 
-`centro_custo`VARCHAR(20) NULL COMMENT 'Centro de Custo', 
-`situacao_doacao` CHAR(1) NOT NULL COMMENT'SituaÁ„o da DoaÁ„o' , 
-PRIMARY KEY (`id_tipo_doacao`) COMMENT 'id_Doacao') ENGINE = MyISAM;
+`id_tipo_doacao` INT NOT NULL AUTO_INCREMENT COMMENT 'C√≥digo do Tipo da Doa√ß√£o', 
+`nome_tipo_doacao` VARCHAR(40) NOT NULL COMMENT 'Tipo de Doa√ß√£o', 
+`centro_custo` VARCHAR(20) NULL COMMENT 'Centro de Custo', 
+`situacao_doacao` CHAR(1) NOT NULL COMMENT'Situa√ß√£o da Doa√ß√£o', 
+PRIMARY KEY (`id_tipo_doacao`) COMMENT 'C√≥digo da Doa√ß√£o');

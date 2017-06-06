@@ -1,7 +1,14 @@
-CREATE TABLE `cultos` ( 
-`id_culto` INT NOT NULL AUTO_INCREMENT COMMENT'C骴igo do Culto' , 
-`nome_culto` VARCHAR(30) NOT NULL COMMENT 'Tipo do Culto' ,
-`especial` CHAR(1) NOT NULL COMMENT 'Culto Especial (S/N)' , 
-`situacao_culto`CHAR(1) NOT NULL COMMENT 'Situa玢o do Culto' , 
+CREATE TABLE `culto` ( 
+`id_culto` INT NOT NULL AUTO_INCREMENT COMMENT 'C贸digo do Culto' ,
+`id_tipo_culto` INT NOT NULL COMMENT 'C贸digo do Culto' ,
+`id_sacerdote` INT NOT NULL COMMENT 'C贸digo do Fiel/Sacerdote' ,
+`id_templo` INT NOT NULL COMMENT 'C贸digo do Templo' ,
+`id_regiao` INT NOT NULL COMMENT 'C贸digo da Regi茫o do Culto' ,
+`id_associacao` INT NULL COMMENT 'C贸digo da Associa莽茫o Promotora do Culto' ,
+`id_grupo` INT NULL COMMENT 'C贸digo do Grupo' ,
+`id_fiel` INT NULL COMMENT 'C贸digo do Fiel' ,
+`data_hora_culto` DATETIME NULL COMMENT 'Data e Hora do culto',
+`locaizacao_culto` VARCHAR(50) NOT NULL COMMENT 'Localiza莽茫o do Culto' , 
+`situacao_culto`CHAR(1) NOT NULL COMMENT 'Situa莽茫o do Culto (A)tivo (I)nativo' , 
 PRIMARY KEY (`id_culto`) COMMENT 'id_culto' 
-) ENGINE = MyISAM;
+);

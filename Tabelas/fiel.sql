@@ -13,7 +13,7 @@ CREATE TABLE `fiel` (
 `data_falecimento_fiel` DATETIME NOT NULL COMMENT 'Data de Falecimento do Fiel',
 `id_profissao_fiel` INT NOT NULL COMMENT 'Código da Frofissao do Fiel',
 `email_fiel` VARCHAR(30) NULL DEFAULT NULL COMMENT 'E-mail do Fiel',
-`data_conversao_fiel` DATETIME NOT NULL COMMENT 'Data de Conversão do Fiel',
+`data_conversao_fiel` DATETIME NULL COMMENT 'Data de Conversão do Fiel',
 `padrinho_madrinha_fiel` VARCHAR(30) NULL DEFAULT NULL COMMENT 'Padrinho ou Madrinha do Fiel',
 `data_desligamento_fiel` DATETIME NOT NULL COMMENT 'Data de Desligamento do Fiel',
 `situacao_fiel` CHAR(1) NULL DEFAULT NULL COMMENT 'Situação do Fiel (A/I)',
