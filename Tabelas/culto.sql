@@ -7,8 +7,9 @@ CREATE TABLE `culto` (
 `id_associacao` INT NULL COMMENT 'Código da Associação Promotora do Culto' ,
 `id_grupo` INT NULL COMMENT 'Código do Grupo' ,
 `id_fiel` INT NULL COMMENT 'Código do Fiel' ,
-`data_hora_culto` DATETIME NULL COMMENT 'Data e Hora do culto',
-`locaizacao_culto` VARCHAR(50) NOT NULL COMMENT 'Localização do Culto' , 
+`data_culto` DATETIME NULL COMMENT 'Data do culto',
+`hora_culto` DATETIME NULL COMMENT 'Hora do culto',
+`localizacao_culto` VARCHAR(50) NOT NULL COMMENT 'Localização do Culto' , 
 `situacao_culto`CHAR(1) NOT NULL COMMENT 'Situação do Culto (A)tivo (I)nativo' , 
 PRIMARY KEY (`id_culto`) COMMENT 'id_culto' 
 );
