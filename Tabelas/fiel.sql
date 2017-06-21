@@ -1,5 +1,7 @@
 CREATE TABLE `fiel` (
 `id_fiel` INT NOT NULL AUTO_INCREMENT COMMENT 'Código do Fiel',
+`id_templo` INT NOT NULL COMMENT 'Código do Templo',
+`id_cargo` int NULL  COMMENT 'Campo Código do Cargo',
 `nome_fiel` VARCHAR(20) NULL DEFAULT NULL COMMENT 'Nome do Fiel',
 `sobrenome_fiel` VARCHAR(20) NULL DEFAULT NULL COMMENT 'Sobrenome do Fiel',
 `data_nascimento_fiel` DATETIME NOT NULL COMMENT 'Data de Nascimento do Fiel',
