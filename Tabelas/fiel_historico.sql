@@ -1,10 +1,11 @@
-CREATE TABLE `fiel` (
-`id_fiel` INT NOT NULL AUTO_INCREMENT COMMENT 'Código do Fiel',
+CREATE TABLE `fiel_historico` (
+`ano_referencia_historico` INT NOT NULL COMMENT 'Ano de Refeência do Histórico do Fiel',
+`id_fiel` INT NOT NULL COMMENT 'Código do Fiel',
 `id_templo` INT NOT NULL COMMENT 'Código do Templo',
 `id_cargo` INT  NULL COMMENT 'Código do Cargo no Templo',
 `nome_fiel` VARCHAR(20) NULL DEFAULT NULL COMMENT 'Nome do Fiel',
 `sobrenome_fiel` VARCHAR(20) NULL DEFAULT NULL COMMENT 'Sobrenome do Fiel',
-`data_nascimento_fiel` DATETIME NOT NULL COMMENT 'Data de Nascimento do Fiel',
+`data_nascimento_fiel` DATETIME NULL COMMENT 'Data de Nascimento do Fiel',
 `genero_fiel` CHAR(1) NULL DEFAULT NULL COMMENT 'Genero do Fiel (M/F)',
 `rg_fiel` INT NULL COMMENT 'RG do Fiel',
 `data_emissao_rg_fiel` DATETIME  NULL COMMENT 'Data de Emissão RG do Fiel',
@@ -21,5 +22,5 @@ CREATE TABLE `fiel` (
 `padrinho_madrinha_fiel` VARCHAR(30) NULL DEFAULT NULL COMMENT 'Padrinho ou Madrinha do Fiel',
 `data_desligamento_fiel` DATETIME NULL COMMENT 'Data de Desligamento do Fiel',
 `observacao_fiel` VARCHAR(100) NULL DEFAULT NULL COMMENT 'Observação do Fiel',
-`situacao_fiel` CHAR(1) NULL DEFAULT NULL COMMENT 'Situação do Fiel (A/I)',
-PRIMARY KEY (`id_fiel`) COMMENT 'Código do Fiel');
+`situacao_fiel_historico` CHAR(1) NULL DEFAULT NULL COMMENT 'Situação do Fiel (A/I)',
+INDEX `idx_historico` (`ano_referencia_historico`,`id_fiel`) COMMENT 'Ano de Referência e Código do Fiel' );

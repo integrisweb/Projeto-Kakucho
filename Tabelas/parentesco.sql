@@ -1,5 +1,5 @@
 CREATE TABLE `parentesco` ( 
-`id_parentesco` INT NOT NULL AUTO_INCREMENT COMMENT 'Código do Parentesco' , 
+`id_parentesco` INT NOT NULL AUTO_INCREMENT COMMENT 'CÃ³digo do Parentesco' , 
 `parentesco` VARCHAR(40) NOT NULL COMMENT 'Tipo do Parentesco' , 
-`situacao_parentesco` CHAR(1) NOT NULL COMMENT 'Situação Tipo de Parentesco' , 
+`situacao_parentesco` CHAR(1) NOT NULL COMMENT 'SituaÃ§Ã£o Tipo de Parentesco' , 
 PRIMARY KEY (`id_parentesco`) COMMENT'idParentesco' ) ENGINE = MyISAM;
