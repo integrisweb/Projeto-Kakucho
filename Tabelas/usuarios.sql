@@ -1,5 +1,6 @@
 CREATE TABLE IF NOT EXISTS `usuario` (
-  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `id_usuario` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Código do Usuário',
+  `id_templo` INT NOT NULL COMMENT 'Código do Templo',  
   `nome_usuario` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email_usuario` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `senha_usuario` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
